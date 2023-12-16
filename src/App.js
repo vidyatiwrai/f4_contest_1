@@ -50,39 +50,36 @@ const SignUpForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <label>Email:</label>
       <input
         type="text"
         value={email}
         onChange={handleEmailChange}
-        style={{ border: emailValid ? '1px solid green' : '1px solid red' }}
+        className={emailValid ? 'valid' : 'invalid'}
       />
-      {!emailValid && <p>Error: Please enter a valid email address</p>}
+      {!emailValid && <p className="error">Error: Please enter a valid email address</p>}
 
       <label>Password:</label>
       <input
         type="password"
         value={password}
         onChange={handlePasswordChange}
-        style={{ border: passwordValid ? '1px solid green' : '1px solid red' }}
+        className={passwordValid ? 'valid' : 'invalid'}
       />
-      {!passwordValid && <p>Error: Password must be at least 8 characters long</p>}
+      {!passwordValid && <p className="error">Error: Password must be at least 8 characters long</p>}
 
       <label>Confirm Password:</label>
       <input
         type="password"
         value={confirmPassword}
         onChange={handleConfirmPasswordChange}
-        style={{
-          border: confirmPasswordValid ? '1px solid green' : '1px solid red',
-        }}
+        className={confirmPasswordValid ? 'valid' : 'invalid'}
       />
-      {!confirmPasswordValid && <p>Error: Passwords do not match</p>}
+      {!confirmPasswordValid && <p className="error">Error: Passwords do not match</p>}
 
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
-
 export default SignUpForm;

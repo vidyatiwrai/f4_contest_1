@@ -1,4 +1,31 @@
-h1{
-  text-align: center;
-  margin-top: 300px;
+*{
+  background-color:yellow;
+  color:red;
+  font-size: larger;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px; /* Adjust the margin as needed */
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px; /* Adjust the width as needed */
+}
+
+.valid {
+  border: 3px solid black;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
 }
